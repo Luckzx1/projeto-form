@@ -1,0 +1,25 @@
+{
+  "name": "projeto-form",
+  "version": "1.0.0",
+  "description": "Atividade sobre formulários do Araya",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luckzx1/projeto-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Luckzx1/projeto-form/issues"
+  },
+  "homepage": "https://github.com/Luckzx1/projeto-form#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}

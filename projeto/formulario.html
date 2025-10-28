@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       <input type="text" 
+               name="aluno" 
+               id="id_aluno" 
+               required 
+               placeholder="Digite seu nome">
+        <br>
+        <br>
+        <input type="number"
+               name="nota1" 
+               id="id_nota1" 
+               required 
+               placeholder="Digite a 1° nota" inputmode="decimal" step="any">
+        <br>
+        <br>
+        <input type="number"
+                name="nota2" 
+                id="id_nota2" 
+                required 
+                placeholder="Digite a 2° nota" inputmode="decimal" step="any">
+        <br>
+        <br>
+        <input type="submit" value="Ok">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const aluno = document.getElementById('id_aluno');
+            const nota1 = document.getElementById('id_nota1');
+            const nota2 = document.getElementById('id_nota2');
+            const media = (Number(nota1.value) + Number(nota2.value)) / 2;
+            let mensagem = `Olá ${aluno.value}, sua média é: ${media}. `;
+            if (media >= 6) {
+                alert(`O aluno ${aluno.value} foi aprovado com a média de ${media.toFixed(2)}! Notas: ${nota1.value} e ${nota2.value}`);
+            } else if (media >= 2 && media < 6) {
+                alert(`O aluno ${aluno.value} está em recuperação com a média de ${media.toFixed(2)}! Notas: ${nota1.value} e ${nota2.value}`);
+            } else {
+                alert(`O aluno ${aluno.value} foi reprovado com a média de ${media.toFixed(2)}! Notas: ${nota1.value} e ${nota2.value}`);
+            }
+        });
+    </script>
+
+</body>
+</html>
